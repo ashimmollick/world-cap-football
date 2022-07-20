@@ -3,26 +3,28 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
 }
 
 
 .container {
-    width: 1200px;
+    padding: 0 80px;
 }
 
 /* banner style  */
 
 .banner-section {
-    display: flex;
+    display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
     background-color: #000;
     padding: 0 50px;
     grid-column-gap: 50px;
     border-radius: 30px;
+}
+
+.banner-content {
+    padding-bottom: 50px;
 }
 
 .banner-content h1 {
@@ -46,20 +48,28 @@ body {
     font-size: 20px;
 }
 
+.banner-images {
+    height: 100%;
+    width: 100%;
+
+}
+
 .banner-images img {
-    width: 580px;
+    width: 100%;
+    height: 100%;
     display: block;
 }
 
 /* blog-area style  */
 
 .blog-area {
-    display: flex;
+    display: grid;
+    grid-template-columns: .7fr 2fr;
     padding: 100px 0;
 }
 
 .blog-area aside {
-    width: 300px;
+
     height: 300px;
     background-color: #161616;
     display: grid;
@@ -90,7 +100,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
-    width: 900px;
+
 }
 
 .blog {
@@ -100,6 +110,7 @@ body {
 
 .blog img {
     width: 100%;
+
 }
 
 .blog-content {
@@ -141,6 +152,8 @@ body {
     padding-top: 50px;
 }
 
+/* footer area style   */
+
 footer {
     background-color: #161616;
     display: flex;
@@ -152,8 +165,7 @@ footer {
 }
 
 .footer-area {
-    width: 1200px;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .footer-logo h2 {
@@ -167,16 +179,14 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
+.footer-nav {
+    text-align: center;
 }
 
 nav ul li {
     list-style: none;
-    padding-left: 50px;
+    display: inline-block;
+    margin: 17px 20px;
 }
 
 nav ul li a {
@@ -184,4 +194,121 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
+}
+
+
+/* responsive design  */
+
+
+
+
+@media screen and (max-width:1144px) {
+    .container {
+        padding: 0 50px;
+    }
+
+    .banner-content h1 {
+        font-size: 55px;
+    }
+
+    .blog-area aside a.blog-side-button {
+        padding: 17px 26px;
+    }
+
+}
+
+/* tablet design  */
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+        line-height: 60px;
+    }
+
+    .button {
+        padding: 10px 18px;
+    }
+
+    .blog-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 60px 0;
+    }
+
+    .blog-area aside {
+        height: auto;
+        background-color: #fff;
+        display: grid;
+        margin-right: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding: 30px 0;
+    }
+
+    .blog-area aside a.blog-side-button {
+        padding: 17px 26px;
+        border: 1px solid #E8E8E8;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .view-all-button {
+        display: block;
+        text-align: center;
+
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .banner-section {
+        display: block;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 30px;
+        line-height: 33px;
+        padding: 30px 0;
+    }
+
+    .blog-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 60px 0;
+    }
+
+    .blog-area aside {
+        height: auto;
+        background-color: #fff;
+        display: grid;
+        margin-right: 0;
+        grid-row-gap: 20px;
+    }
+
+    .blog-area aside a.blog-side-button {
+        padding: 17px 30px;
+        border: 1px solid #E8E8E8;
+    }
+
+    .blogs {
+        grid-template-columns: 1fr;
+        padding-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+    }
 }
