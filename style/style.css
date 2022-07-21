@@ -51,6 +51,7 @@ body {
 .button i {
     position: relative;
     animation: animation 1s infinite;
+    top: 2px;
 }
 
 @keyframes animation {
