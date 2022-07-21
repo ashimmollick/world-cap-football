@@ -48,6 +48,21 @@ body {
     font-size: 20px;
 }
 
+.button i {
+    position: relative;
+    animation: animation 1s infinite;
+}
+
+@keyframes animation {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 15px;
+    }
+}
+
 .banner-images {
     height: 100%;
     width: 100%;
@@ -196,6 +211,32 @@ nav ul li a {
     font-weight: 500;
 }
 
+/* upcoming page style  */
+.upcoming-blog {
+    padding: 40px 25px;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+}
+
+.images img {
+    width: 100%;
+}
+
+.images h2 {
+    margin: 0 10px;
+}
+
+.upcoming-list {
+    text-align: center;
+}
+
+.upcoming-list h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
 
 /* responsive design  */
 
@@ -263,10 +304,11 @@ nav ul li a {
         display: block;
         text-align: center;
 
+
     }
 }
 
-@media screen and (min-width:320px) and (max-width:767px) {
+@media only screen and (min-width:320px) and (max-width:767px) {
 
     .container {
         padding: 0 20px;
